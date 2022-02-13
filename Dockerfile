@@ -14,6 +14,7 @@ RUN wget http://lmtx.pragma-ade.nl/install-lmtx/context-linux-64.zip && \
     unzip context-linux-64.zip && \
     sh install.sh && \
     rm context-linux-64.zip
+ADD profiles/* ${APP_ROOT}/context/tex/texmf-context/colors/icc/profiles/
 RUN echo 'export PATH=${APP_ROOT}/context/tex/texmf-linux-64/bin:${APP_ROOT}:$PATH' >> ~/.bashrc && \
     echo 'export PATH=${APP_ROOT}/context/tex/texmf-linux-64/bin:${APP_ROOT}:$PATH' >> ~/.zshenv && \
     echo 'export PATH=${APP_ROOT}/context/tex/texmf-linux-64/bin:${APP_ROOT}:$PATH' >> ~/.profile && \
