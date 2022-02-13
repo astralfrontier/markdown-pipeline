@@ -1,6 +1,6 @@
-FROM debian:stretch-slim
+FROM node:17-slim
 
-ENV APP_ROOT=/markdown-pipeline
+ENV APP_ROOT=/to
 ENV PANDOC_VERSION=2.17.1.1
 
 WORKDIR ${APP_ROOT}
